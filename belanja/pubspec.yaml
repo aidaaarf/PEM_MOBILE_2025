@@ -51,6 +51,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    # Daftarkan folder 'assets/' secara keseluruhan
+    # Ini akan mengizinkan semua file yang ada langsung di dalam folder assets/ untuk diakses
+    - assets/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

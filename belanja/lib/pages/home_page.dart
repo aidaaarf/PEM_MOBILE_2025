@@ -2,10 +2,10 @@ import 'package:belanja/models/item.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  // TODO: implement build
   final List<Item> items = [
-    Item(name: 'sugar', price: 5000),
-    Item(name: 'salt', price: 2000),
+    // Pastikan Anda sudah menambahkan gambar ini ke folder assets dan daftarkan di pubspec.yaml
+    Item(name: 'sugar', price: 5000, image: 'assets/sugar.jpg'), 
+    Item(name: 'salt', price: 2000, image: 'assets/salt.jpeg'),
   ];
 
   @override
@@ -21,7 +21,10 @@ class HomePage extends StatelessWidget {
             final item = items[index];
             return InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/item');
+                 Navigator.pushNamed(context, 
+                  '/item',
+                  arguments: item
+                );
               },
               child: Card(
                 child: Container(
